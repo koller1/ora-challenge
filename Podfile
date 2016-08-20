@@ -3,5 +3,6 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Ora Challenge' do
-  pod 'Freddy'
+    pod 'Alamofire', '~> 3.4'
+    pod 'Freddy'
 end
