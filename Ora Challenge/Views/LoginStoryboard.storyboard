@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="1lO-th-Zyl">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="6V7-K7-h9I" customClass="LoginViewController" customModule="Ora_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7l4-PC-aEh"/>
+                        <viewControllerLayoutGuide type="bottom" id="3WQ-M7-O7m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n7Z-JK-QU2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-Xq-whJ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="OraChat" id="dJz-11-u27">
+                                        <barButtonItem key="leftBarButtonItem" title="Register" id="vXW-EA-9i7"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Login" id="NBF-Bz-FwH"/>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="6V7-K7-h9I" id="RYQ-JR-N1l"/>
+                                </connections>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cbs-Xq-whJ" secondAttribute="trailing" id="7r7-Ls-bGT"/>
+                            <constraint firstItem="cbs-Xq-whJ" firstAttribute="leading" secondItem="n7Z-JK-QU2" secondAttribute="leading" id="aK9-ZH-z5i"/>
+                            <constraint firstItem="cbs-Xq-whJ" firstAttribute="top" secondItem="7l4-PC-aEh" secondAttribute="bottom" id="vHC-xW-HT9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftBarButtonItem" destination="vXW-EA-9i7" id="Jld-pV-xJd"/>
+                        <outlet property="navigationBar" destination="cbs-Xq-whJ" id="pEf-OL-f6b"/>
+                        <outlet property="rightBarButtonItem" destination="NBF-Bz-FwH" id="Loh-dq-aXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JC5-Si-hc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="415"/>
+        </scene>
+    </scenes>
+</document>

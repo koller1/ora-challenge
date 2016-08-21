@@ -9,6 +9,15 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    /** Top container controller over main app content */
+    private var loginViewController: LoginViewController!
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        
+        if let controller = segue.destinationViewController as? LoginViewController {
+            loginViewController = controller
+        }
+    }
 }
 
