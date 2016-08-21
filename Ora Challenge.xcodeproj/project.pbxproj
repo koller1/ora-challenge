@@ -29,6 +29,8 @@
 		FAAF0F2C1D6A3F5300433DC7 /* UIView+Unarchiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F2B1D6A3F5300433DC7 /* UIView+Unarchiving.swift */; };
 		FAAF0F2E1D6A3F5900433DC7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F2D1D6A3F5900433DC7 /* UIView+AutoLayout.swift */; };
 		FAAF0F311D6A405D00433DC7 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F301D6A405D00433DC7 /* View.swift */; };
+		FAAF0F341D6A436000433DC7 /* SignInField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F331D6A436000433DC7 /* SignInField.swift */; };
+		FAAF0F361D6A438700433DC7 /* SignInField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F351D6A438700433DC7 /* SignInField.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		FAAF0F2B1D6A3F5300433DC7 /* UIView+Unarchiving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Unarchiving.swift"; sourceTree = "<group>"; };
 		FAAF0F2D1D6A3F5900433DC7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		FAAF0F301D6A405D00433DC7 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FAAF0F331D6A436000433DC7 /* SignInField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInField.swift; sourceTree = "<group>"; };
+		FAAF0F351D6A438700433DC7 /* SignInField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInField.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +208,18 @@
 			isa = PBXGroup;
 			children = (
 				FAAF0F301D6A405D00433DC7 /* View.swift */,
+				FAAF0F321D6A431600433DC7 /* Form */,
 			);
 			name = Shared;
+			sourceTree = "<group>";
+		};
+		FAAF0F321D6A431600433DC7 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F351D6A438700433DC7 /* SignInField.xib */,
+				FAAF0F331D6A436000433DC7 /* SignInField.swift */,
+			);
+			name = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +286,7 @@
 				FA1CA54D1D690877002A7E8B /* MainStoryboard.storyboard in Resources */,
 				FA1CA54C1D690870002A7E8B /* LaunchScreen.storyboard in Resources */,
 				FA1CA53A1D690679002A7E8B /* Assets.xcassets in Resources */,
+				FAAF0F361D6A438700433DC7 /* SignInField.xib in Resources */,
 				FAAF0F2A1D6A3AE900433DC7 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +348,7 @@
 			files = (
 				FAAF0F281D6A3ADE00433DC7 /* LoginViewController.swift in Sources */,
 				FAAF0F191D6A27D100433DC7 /* Model.swift in Sources */,
+				FAAF0F341D6A436000433DC7 /* SignInField.swift in Sources */,
 				FAAF0F161D6A170B00433DC7 /* NetworkCancelable.swift in Sources */,
 				FA1CA5351D690679002A7E8B /* MainViewController.swift in Sources */,
 				FAAF0F311D6A405D00433DC7 /* View.swift in Sources */,

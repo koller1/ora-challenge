@@ -12,7 +12,7 @@ class View: UIView {
     
     override func awakeAfterUsingCoder(aDecoder: NSCoder) -> AnyObject? {
         // ignore if set not to replace or we're not a template
-        if !self.dynamicType.isReplacable() || !subviews.isEmpty {
+        if !self.dynamicType.isReplacable || !subviews.isEmpty {
             return self;
         }
         
@@ -31,7 +31,8 @@ class View: UIView {
     
     // MARK: - Replacability
     
-    class func isReplacable() -> Bool {
+    class var isReplacable: Bool {
         return false
     }
+    
 }

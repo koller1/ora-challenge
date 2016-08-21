@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="SignInField" customModule="Ora_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAc-rJ-Agz">
+                    <rect key="frame" x="15" y="31" width="90" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="j2A-rq-46v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICQ-w8-n8l">
+                    <rect key="frame" x="15" y="83" width="417" height="1"/>
+                    <color key="backgroundColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="h6L-IS-MHZ"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwt-1F-sSm">
+                    <rect key="frame" x="115" y="33.5" width="302" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ICQ-w8-n8l" secondAttribute="bottom" id="DT7-mD-VuI"/>
+                <constraint firstAttribute="trailing" secondItem="ICQ-w8-n8l" secondAttribute="trailing" id="NZa-aj-Yw3"/>
+                <constraint firstItem="fwt-1F-sSm" firstAttribute="leading" secondItem="VAc-rJ-Agz" secondAttribute="trailing" constant="10" id="OQn-Ux-p2Y"/>
+                <constraint firstItem="VAc-rJ-Agz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="T1w-QI-C4b"/>
+                <constraint firstItem="ICQ-w8-n8l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="a2d-ah-ru0"/>
+                <constraint firstAttribute="trailing" secondItem="fwt-1F-sSm" secondAttribute="trailing" constant="15" id="edt-Py-5qN"/>
+                <constraint firstItem="fwt-1F-sSm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gHK-6e-NXu"/>
+                <constraint firstItem="VAc-rJ-Agz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zv5-A5-5UF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textField" destination="fwt-1F-sSm" id="Yya-fj-CrM"/>
+                <outlet property="titleLabel" destination="VAc-rJ-Agz" id="6ma-Ci-aD6"/>
+            </connections>
+            <point key="canvasLocation" x="387" y="381"/>
+        </view>
+    </objects>
+</document>
