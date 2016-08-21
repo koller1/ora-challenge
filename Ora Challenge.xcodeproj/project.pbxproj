@@ -17,6 +17,12 @@
 		FA1CA5531D6925DA002A7E8B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA5521D6925DA002A7E8B /* Request.swift */; };
 		FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CA5541D692A9C002A7E8B /* Services+User.swift */; };
 		FAAF0F161D6A170B00433DC7 /* NetworkCancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F151D6A170B00433DC7 /* NetworkCancelable.swift */; };
+		FAAF0F191D6A27D100433DC7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F181D6A27D100433DC7 /* Model.swift */; };
+		FAAF0F1B1D6A27E800433DC7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F1A1D6A27E800433DC7 /* User.swift */; };
+		FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F1C1D6A2A2600433DC7 /* Chat.swift */; };
+		FAAF0F1F1D6A2A2A00433DC7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F1E1D6A2A2A00433DC7 /* Message.swift */; };
+		FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F201D6A306100433DC7 /* NSDate+Formatting.swift */; };
+		FAAF0F231D6A322F00433DC7 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F221D6A322F00433DC7 /* Pagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		FA1CA5521D6925DA002A7E8B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FA1CA5541D692A9C002A7E8B /* Services+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Services+User.swift"; sourceTree = "<group>"; };
 		FAAF0F151D6A170B00433DC7 /* NetworkCancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCancelable.swift; sourceTree = "<group>"; };
+		FAAF0F181D6A27D100433DC7 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FAAF0F1A1D6A27E800433DC7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAAF0F1C1D6A2A2600433DC7 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		FAAF0F1E1D6A2A2A00433DC7 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FAAF0F201D6A306100433DC7 /* NSDate+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Formatting.swift"; sourceTree = "<group>"; };
+		FAAF0F221D6A322F00433DC7 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,11 @@
 		FA1CA5491D6907BD002A7E8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FAAF0F181D6A27D100433DC7 /* Model.swift */,
+				FAAF0F1A1D6A27E800433DC7 /* User.swift */,
+				FAAF0F1C1D6A2A2600433DC7 /* Chat.swift */,
+				FAAF0F1E1D6A2A2A00433DC7 /* Message.swift */,
+				FAAF0F221D6A322F00433DC7 /* Pagination.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +169,7 @@
 		FA1CA54A1D6907C6002A7E8B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				FAAF0F201D6A306100433DC7 /* NSDate+Formatting.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -278,10 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAF0F191D6A27D100433DC7 /* Model.swift in Sources */,
 				FAAF0F161D6A170B00433DC7 /* NetworkCancelable.swift in Sources */,
 				FA1CA5351D690679002A7E8B /* MainViewController.swift in Sources */,
 				FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */,
+				FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */,
+				FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */,
+				FAAF0F1B1D6A27E800433DC7 /* User.swift in Sources */,
 				FA1CA5531D6925DA002A7E8B /* Request.swift in Sources */,
+				FAAF0F1F1D6A2A2A00433DC7 /* Message.swift in Sources */,
+				FAAF0F231D6A322F00433DC7 /* Pagination.swift in Sources */,
 				FA1CA54F1D691DA9002A7E8B /* Services.swift in Sources */,
 				FA1CA5331D690679002A7E8B /* AppDelegate.swift in Sources */,
 			);

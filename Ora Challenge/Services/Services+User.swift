@@ -10,13 +10,10 @@ import Foundation
 
 extension Services {
     
-    func fetchUser(handler: (Any, NSError) -> ()) -> NetworkCancelable {
+    func fetchUser(handler: (User?, NSError?) -> Void) -> NetworkCancelable {
         let request = Request(get: "\(servicesPath)users/me") 
         
-        // TODO: Implement models
-        return startRequest(request) { (result, error) in
-            print(result)
-        }
+        return startRequest(request, parseModel: User.self, handler: handler)
     }
     
 }
