@@ -23,6 +23,7 @@
 		FAAF0F1F1D6A2A2A00433DC7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F1E1D6A2A2A00433DC7 /* Message.swift */; };
 		FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F201D6A306100433DC7 /* NSDate+Formatting.swift */; };
 		FAAF0F231D6A322F00433DC7 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F221D6A322F00433DC7 /* Pagination.swift */; };
+		FAAF0F251D6A374100433DC7 /* UIViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F241D6A374100433DC7 /* UIViewController+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FAAF0F1E1D6A2A2A00433DC7 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FAAF0F201D6A306100433DC7 /* NSDate+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Formatting.swift"; sourceTree = "<group>"; };
 		FAAF0F221D6A322F00433DC7 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		FAAF0F241D6A374100433DC7 /* UIViewController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAF0F201D6A306100433DC7 /* NSDate+Formatting.swift */,
+				FAAF0F241D6A374100433DC7 /* UIViewController+Utility.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */,
 				FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */,
 				FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */,
+				FAAF0F251D6A374100433DC7 /* UIViewController+Utility.swift in Sources */,
 				FAAF0F1B1D6A27E800433DC7 /* User.swift in Sources */,
 				FA1CA5531D6925DA002A7E8B /* Request.swift in Sources */,
 				FAAF0F1F1D6A2A2A00433DC7 /* Message.swift in Sources */,
