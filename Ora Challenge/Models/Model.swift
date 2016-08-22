@@ -9,7 +9,7 @@
 import Foundation
 import Freddy
 
-class Model: JSONDecodable {
+class Model: JSONDecodable, JSONEncodable {
     
     let uid: Int
     
@@ -17,6 +17,14 @@ class Model: JSONDecodable {
     
     required init(json: JSON) throws {
         self.uid = try json.int("id")
+    }
+    
+    // MARK: - JSONEncodable
+    
+    func toJSON() -> JSON {
+        return .Dictionary([
+            "id": .Int(uid)
+        ])
     }
     
 }
