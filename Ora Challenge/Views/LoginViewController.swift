@@ -29,6 +29,14 @@ class LoginViewController: UIViewController {
         var hidesConfirmField: Bool {
             return self == .Login
         }
+        
+        var fieldModels: [SignInFieldModel.FieldType: SignInFieldModel] {
+            if self == .Login {
+                return SignInFieldModel.loginFieldModels()
+            } else {
+                return SignInFieldModel.registerFieldModels()
+            }
+        }
     }
     
     @IBOutlet private weak var navigationBar: UINavigationBar!
@@ -39,6 +47,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var emailField: SignInField!
     @IBOutlet private weak var passwordField: SignInField!
     @IBOutlet private weak var confirmField: SignInField!
+    @IBOutlet private var fields: [SignInField]!
     
     /** Current UI state of view */
     private var currentState: LoginViewState = .Login {
@@ -50,8 +59,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup initial state
+        changeState(currentState)
+//        currentState = .Login
     }
-    
     
     // MARK: - Actions
     
@@ -72,16 +83,23 @@ class LoginViewController: UIViewController {
     //
     
     private func changeState(state: LoginViewState) {
+        let duration = 0.6
+        
         // swap bar button titles
-        UIView.transitionWithView(formStackView, duration: 0.7, options: [.TransitionCrossDissolve], animations: {
+        UIView.transitionWithView(formStackView, duration: duration, options: [.TransitionCrossDissolve], animations: {
             self.leftBarButtonItem.title  = state.leftBarButtonTitle
             self.rightBarButtonItem.title = state.rightBarButtonTitle
         }, completion: nil)
         
         // toggle visibility of fields
-        UIView.animateWithDuration(0.7) {
+        UIView.animateWithDuration(duration) {
             self.nameField.hidden    = state.hidesNameField
             self.confirmField.hidden = state.hidesConfirmField
+        }
+        
+        // update field models
+        for (type, model) in state.fieldModels {
+            fields[type.rawValue].model = model
         }
     }
 }

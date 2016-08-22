@@ -13,6 +13,18 @@ class SignInField: View {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var textField: UITextField!
     
+    var value: String {
+        return textField.text ?? ""
+    }
+    
+    var model: SignInFieldModel? {
+        didSet {
+            titleLabel.text           = model?.title
+            textField.placeholder     = model?.placeholder
+            textField.secureTextEntry = model?.isSecure ?? false
+        }
+    }
+    
     // MARK: - Replacability
     
     override class var isReplacable: Bool {
