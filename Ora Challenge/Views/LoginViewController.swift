@@ -59,9 +59,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // style navigation bar
+        navigationBar.oraStylize()
+        
         // setup initial state
         changeState(currentState)
-//        currentState = .Login
     }
     
     // MARK: - Actions

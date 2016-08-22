@@ -33,6 +33,7 @@
 		FAAF0F361D6A438700433DC7 /* SignInField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F351D6A438700433DC7 /* SignInField.xib */; };
 		FAAF0F381D6A6C4B00433DC7 /* SignInFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F371D6A6C4B00433DC7 /* SignInFieldModel.swift */; };
 		FAAF0F3A1D6BA77C00433DC7 /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F391D6BA77C00433DC7 /* UIColor+Utility.swift */; };
+		FAAF0F3E1D6BA92700433DC7 /* UINavigationBar+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		FAAF0F351D6A438700433DC7 /* SignInField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInField.xib; sourceTree = "<group>"; };
 		FAAF0F371D6A6C4B00433DC7 /* SignInFieldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInFieldModel.swift; sourceTree = "<group>"; };
 		FAAF0F391D6BA77C00433DC7 /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				FAAF0F241D6A374100433DC7 /* UIViewController+Utility.swift */,
 				FAAF0F2D1D6A3F5900433DC7 /* UIView+AutoLayout.swift */,
 				FAAF0F2B1D6A3F5300433DC7 /* UIView+Unarchiving.swift */,
+				FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */,
 				FAAF0F391D6BA77C00433DC7 /* UIColor+Utility.swift */,
 			);
 			path = Categories;
@@ -372,6 +375,7 @@
 				FAAF0F2E1D6A3F5900433DC7 /* UIView+AutoLayout.swift in Sources */,
 				FA1CA54F1D691DA9002A7E8B /* Services.swift in Sources */,
 				FA1CA5331D690679002A7E8B /* AppDelegate.swift in Sources */,
+				FAAF0F3E1D6BA92700433DC7 /* UINavigationBar+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
