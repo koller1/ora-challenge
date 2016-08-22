@@ -9,6 +9,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    /** Container with login view controller's view */
+    @IBOutlet private weak var loginContainerView: UIView!
     /** Top container controller over main app content */
     private var loginViewController: LoginViewController!
     
@@ -17,7 +19,18 @@ class MainViewController: UIViewController {
         
         if let controller = segue.destinationViewController as? LoginViewController {
             loginViewController = controller
+            loginViewController.delegate = self
         }
     }
 }
 
+// MARK: - LoginViewControllerDelegate
+extension MainViewController: LoginViewControllerDelegate {
+
+    func didCompleteLogin(user: User) {
+        UIView.animateWithDuration(0.7) {
+            self.loginContainerView.alpha = 0.0
+        }
+    }
+    
+}

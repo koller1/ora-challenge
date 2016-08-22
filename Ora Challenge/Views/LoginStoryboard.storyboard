@@ -89,10 +89,10 @@
                         <outlet property="navigationBar" destination="cbs-Xq-whJ" id="pEf-OL-f6b"/>
                         <outlet property="passwordField" destination="LQd-If-bFF" id="xtt-l7-lHy"/>
                         <outlet property="rightBarButtonItem" destination="NBF-Bz-FwH" id="Loh-dq-aXb"/>
-                        <outletCollection property="fields" destination="la8-7n-xu8" id="4Ub-8N-jFK"/>
-                        <outletCollection property="fields" destination="Pp7-53-eTe" id="BVh-0a-Ngz"/>
-                        <outletCollection property="fields" destination="LQd-If-bFF" id="yHG-nG-eht"/>
-                        <outletCollection property="fields" destination="Bwn-7q-39a" id="dqr-qQ-kIg"/>
+                        <outletCollection property="fields" destination="la8-7n-xu8" collectionClass="NSMutableArray" id="4Ub-8N-jFK"/>
+                        <outletCollection property="fields" destination="Pp7-53-eTe" collectionClass="NSMutableArray" id="BVh-0a-Ngz"/>
+                        <outletCollection property="fields" destination="LQd-If-bFF" collectionClass="NSMutableArray" id="yHG-nG-eht"/>
+                        <outletCollection property="fields" destination="Bwn-7q-39a" collectionClass="NSMutableArray" id="dqr-qQ-kIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JC5-Si-hc9" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate {
+    /** Called when user completes a login or registration */
+    func didCompleteLogin(user: User)
+}
+
 class LoginViewController: UIViewController {
     
     private enum LoginViewState {
@@ -56,6 +61,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+    /** Delegate to receive login callbacks */
+    var delegate: LoginViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,9 +82,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapRightBarButtonItem(sender: AnyObject) {
         if currentState == .Login {
-            // process login
+            login(emailField.value, password: passwordField.value)
         } else {
-            // process registration
+            register(nameField.value, email: emailField.value, password: passwordField.value, confirm: confirmField.value)
         }
     }
     
@@ -102,6 +110,26 @@ class LoginViewController: UIViewController {
         // update field models
         for (type, model) in state.fieldModels {
             fields[type.rawValue].model = model
+        }
+    }
+    
+    private func login(email: String, password: String) {
+        Services.sharedInstance.login(email, password: password) { (user, error) in
+            guard let user = user else {
+                return
+            }
+            
+            self.delegate?.didCompleteLogin(user)
+        }
+    }
+    
+    private func register(name: String, email: String, password: String, confirm: String) {
+        Services.sharedInstance.register(name, email: email, password: password, confirm: confirm) { (user, error) in
+            guard let user = user else {
+                return
+            }
+            
+            self.delegate?.didCompleteLogin(user)
         }
     }
 }

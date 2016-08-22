@@ -32,6 +32,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cIY-rp-eMa" secondAttribute="bottom" id="tkc-m4-TbH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginContainerView" destination="cIY-rp-eMa" id="omX-Nd-FDd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
