@@ -8,9 +8,7 @@
 
 import Foundation
 import Alamofire
-import Freddy
 import ObjectMapper
-import AlamofireObjectMapper
 
 class Services {
     /** Singleton accessor */

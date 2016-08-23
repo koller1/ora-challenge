@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Freddy
 
 extension Services {
     typealias UserServicesHandler = (User?, NSError?) -> Void

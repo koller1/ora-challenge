@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import Freddy
 
 class Request {
     
