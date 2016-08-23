@@ -42,7 +42,10 @@ extension UIView {
         let firstItem  = migrateItem(constraint.firstItem, attribute:&firstAttribute, toView: view)
         let secondItem: AnyObject? = constraint.secondItem != nil ? migrateItem(constraint.secondItem!, attribute: &secondAttribute, toView: view) : nil
         
-        return NSLayoutConstraint(item: firstItem, attribute: firstAttribute, relatedBy: constraint.relation, toItem: secondItem, attribute: secondAttribute, multiplier: constraint.multiplier, constant: constraint.constant)
+        let newConstraint = NSLayoutConstraint(item: firstItem, attribute: firstAttribute, relatedBy: constraint.relation, toItem: secondItem, attribute: secondAttribute, multiplier: constraint.multiplier, constant: constraint.constant)
+        newConstraint.priority = constraint.priority
+        
+        return newConstraint
         
     }
     

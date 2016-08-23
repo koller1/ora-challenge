@@ -43,28 +43,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="TyD-BR-ao7"/>
+                                            <constraint firstAttribute="height" priority="999" constant="44" id="TyD-BR-ao7"/>
                                         </constraints>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pp7-53-eTe" customClass="SignInField" customModule="Ora_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="FmW-5I-G9i"/>
+                                            <constraint firstAttribute="height" priority="999" constant="44" id="FmW-5I-G9i"/>
                                         </constraints>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQd-If-bFF" customClass="SignInField" customModule="Ora_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Zlb-0E-aI4"/>
+                                            <constraint firstAttribute="height" priority="999" constant="44" id="Zlb-0E-aI4"/>
                                         </constraints>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwn-7q-39a" customClass="SignInField" customModule="Ora_Challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="132" width="600" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="On2-lP-WpB"/>
+                                            <constraint firstAttribute="height" priority="999" constant="44" id="On2-lP-WpB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
