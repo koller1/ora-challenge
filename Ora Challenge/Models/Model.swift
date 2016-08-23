@@ -7,24 +7,20 @@
 //
 
 import Foundation
-import Freddy
+import ObjectMapper
 
-class Model: JSONDecodable, JSONEncodable {
+class Model: Mappable {
     
-    let uid: Int
+    private (set) var uid: Int!
     
-    // MARK: - JSONDecodable
+    // MARK: - Mappable
     
-    required init(json: JSON) throws {
-        self.uid = try json.int("id")
+    required init?(_ map: Map) {
+        
     }
     
-    // MARK: - JSONEncodable
-    
-    func toJSON() -> JSON {
-        return .Dictionary([
-            "id": .Int(uid)
-        ])
+    func mapping(map: Map) {
+        uid <- map["id"]
     }
     
 }

@@ -85,9 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Ora Challenge/Alamofire.framework"
-  install_framework "Pods-Ora Challenge/Freddy.framework"
+  install_framework "Pods-Ora Challenge/ObjectMapper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Ora Challenge/Alamofire.framework"
-  install_framework "Pods-Ora Challenge/Freddy.framework"
+  install_framework "Pods-Ora Challenge/ObjectMapper.framework"
 fi

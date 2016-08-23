@@ -17,7 +17,7 @@ extension Services {
             "limit": limit
         ]
         
-        return startRequest(request, parseCollection: Message.self, handler: handler)
+        return startRequest(request, handler: handler)
     }
     
     func createMessage(chatId: Int, message: String, handler: (Message?, NSError?) -> Void) -> NetworkCancelable {
@@ -26,7 +26,7 @@ extension Services {
             "message": message
         ]
         
-        return startRequest(request, parseModel: Message.self, handler: handler)
+        return startRequest(request, handler: handler)
     }
     
 }

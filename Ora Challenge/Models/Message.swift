@@ -7,26 +7,26 @@
 //
 
 import Foundation
-import Freddy
+import ObjectMapper
 
 class Message: Model {
     
-    let chatId: Int
-    let userId: Int
-    let text: String
-    let created: NSDate?
-    let user: User
+    private (set) var chatId: Int!
+    private (set) var userId: Int!
+    private (set) var text: String!
+    private (set) var created: NSDate?
+    private (set) var user: User!
     
-    // MARK: - JSONDecodable
+    // MARK: - Mappable
     
-    required init(json: JSON) throws {
-        self.chatId  = try json.int("chatId")
-        self.userId  = try json.int("userId")
-        self.text    = try json.string("message")
-        self.created = try json.string("created").toDate()
-        self.user    = try json.decode("user")
+    override func mapping(map: Map) {
+        super.mapping(map)
         
-        try super.init(json: json)
+        chatId  <- map["chatId"]
+        userId  <- map["userId"]
+        text    <- map["message"]
+        created <- (map["created"], DateFormatterTransform(dateFormatter: NSDate.servicesFormatter()))
+        user    <- map["user"]
     }
     
 }

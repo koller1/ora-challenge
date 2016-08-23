@@ -192,6 +192,7 @@
 				FAAF0F1C1D6A2A2600433DC7 /* Chat.swift */,
 				FAAF0F1E1D6A2A2A00433DC7 /* Message.swift */,
 				FAAF0F221D6A322F00433DC7 /* Pagination.swift */,
+				FAAF0F431D6BC52400433DC7 /* Shared */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +236,13 @@
 				FAAF0F371D6A6C4B00433DC7 /* SignInFieldModel.swift */,
 			);
 			name = Form;
+			sourceTree = "<group>";
+		};
+		FAAF0F431D6BC52400433DC7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,28 +7,28 @@
 //
 
 import Foundation
-import Freddy
+import ObjectMapper
 
 class Pagination: Model {
     
-    let pageCount: Int
-    let currentPage: Int
-    let hasNextPage: Bool
-    let hasPreviousPage: Bool
-    let count: Int
-    let limit: Int
+    private (set) var pageCount: Int!
+    private (set) var currentPage: Int!
+    private (set) var hasNextPage: Bool!
+    private (set) var hasPreviousPage: Bool!
+    private (set) var count: Int!
+    private (set) var limit: Int!
     
-    // MARK: - JSONDecodable
+    // MARK: - Mappable
     
-    required init(json: JSON) throws {
-        self.pageCount       = try json.int("page_count")
-        self.currentPage     = try json.int("current_page")
-        self.hasNextPage     = try json.bool("has_next_page")
-        self.hasPreviousPage = try json.bool("has_prev_page")
-        self.count           = try json.int("count")
-        self.limit           = try json.int("limit")
+    override func mapping(map: Map) {
+        super.mapping(map)
         
-        try super.init(json: json)
+        pageCount       <- map["page_count"]
+        currentPage     <- map["current_page"]
+        hasNextPage     <- map["has_next_page"]
+        hasPreviousPage <- map["has_prev_page"]
+        count           <- map["count"]
+        limit           <- map["limit"]
     }
     
 }

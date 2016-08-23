@@ -21,7 +21,7 @@ extension Services {
             "confirm":  confirm
         ]
         
-        return startRequest(request, parseModel: User.self, handler: handler)
+        return startRequest(request, handler: handler)
     }
     
     func login(email: String, password: String, handler: UserServicesHandler) -> NetworkCancelable {
@@ -31,20 +31,20 @@ extension Services {
             "password": password
         ]
         
-        return startRequest(request, parseModel: User.self, handler: handler)
+        return startRequest(request, handler: handler)
     }
     
     func fetchUser(handler: UserServicesHandler) -> NetworkCancelable {
         let request = Request(get: "\(servicesPath)users/me") 
         
-        return startRequest(request, parseModel: User.self, handler: handler)
+        return startRequest(request, handler: handler)
     }
     
     func updateUser(user: User, handler: UserServicesHandler) -> NetworkCancelable {
         let request = Request(put: "\(servicesPath)users/me")
 //        request.parameters = user
         
-        return startRequest(request, parseModel: User.self, handler: handler)
+        return startRequest(request, handler: handler)
     }
     
 }

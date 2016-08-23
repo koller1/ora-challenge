@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 import Freddy
+import ObjectMapper
+import AlamofireObjectMapper
 
 class Services {
     /** Singleton accessor */
@@ -26,34 +28,38 @@ class Services {
     
     // MARK: - Parsing
     
-    func startRequest(request: Request, handler: ((JSON?, NSError?) -> Void)?) -> NetworkCancelable {
-        return startRequest(request, withParser: { (json) -> JSON? in
-            return json
-        }, handler: handler)
+    func startRequest(request: Request, handler: (([String: AnyObject]?, NSError?) -> Void)?) -> NetworkCancelable {
+        return startRequest(request, withParser: nil, handler: handler)
     }
     
-    func startRequest<T: JSONDecodable>(request: Request, parseModel klass: T.Type, handler: (T?, NSError?) -> Void) -> NetworkCancelable {
+    func startRequest<T: Mappable>(request: Request, handler: (T?, NSError?) -> Void) -> NetworkCancelable {
         return startRequest(request, withParser: { json -> T? in
-            return try? klass.init(json: json)
+            return Mapper<T>().map(json)
         }, handler: handler)
     }
     
-    func startRequest<T: JSONDecodable>(request: Request, parseCollection klass: T.Type, handler: ([T]?, NSError?) -> Void) -> NetworkCancelable {
+    func startRequest<T: Mappable>(request: Request, handler: ([T]?, NSError?) -> Void) -> NetworkCancelable {
         return startRequest(request, withParser: { json -> [T]? in
-            return try? json.arrayOf()
-        } , handler: handler)
+            return Mapper<T>().mapArray(json)
+        }, handler: handler)
     }
     
-    func startRequest<T>(request: Request, withParser parser: ((JSON) -> T?), handler: ((T?, NSError?) -> Void)?) -> NetworkCancelable {
+    func startRequest<T>(request: Request, withParser parser: ((AnyObject) -> T?)?, handler: ((T?, NSError?) -> Void)?) -> NetworkCancelable {
         
-        return httpClient.request(request).validate().responseData(completionHandler: { response in
+        return httpClient.request(request).validate().responseJSON(completionHandler: { response in
             var result: T? = nil
             
-            if let data = response.data where response.result.isSuccess {
-                let json        = try! JSON(data: data).dictionary()
-                let jsonData    = json["data"]
-                
-                result = parser(jsonData!)
+            // pull out data
+            let jsonResponse = response.result.value as? [String: AnyObject]
+            let jsonData     = jsonResponse?["data"]
+            
+            // attempt parsing if asked
+            if let parser = parser, jsonData = jsonData {
+                result = parser(jsonData)
+            }
+            // otherwise, check if raw response is valid
+            else if let jsonData = jsonData as? T {
+                result = jsonData
             }
             
             handler?(result, response.result.error)

@@ -19,13 +19,27 @@ extension String {
 extension NSDate {
     // see http://stackoverflow.com/questions/29814706/a-declaration-cannot-be-both-final-and-dynamic-error-in-swift-1-2/32831677
     // for @nonobjc explanation
-    @nonobjc static let servicesDateFormat = "asdf"
+    @nonobjc static let servicesDateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    
+    // MARK: - Stringifiers
+    
+    func oraDateTimeString() -> String {
+        return NSDate.servicesFormatter().stringFromDate(self)
+    }
+    
+    // MARK: - Dateifiers
     
     static func dateFromString(string: String, withFormat format: String) -> NSDate? {
         let formatter = formatterForFormat(format)
         let date      = formatter.dateFromString(string)
         
         return date;
+    }
+    
+    // MARK: - Formatters
+    
+    static func servicesFormatter() -> NSDateFormatter {
+        return formatterForFormat(servicesDateFormat)
     }
     
     // MARK: - Formatter Caching

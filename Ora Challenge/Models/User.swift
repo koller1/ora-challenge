@@ -7,22 +7,21 @@
 //
 
 import Foundation
-import Freddy
+import ObjectMapper
 
 class User: Model {
     
-    let name: String
-    let email: String?
-    let token: String?
+    private (set) var name: String!
+    private (set) var email: String?
+    private (set) var token: String?
     
-    // MARK: - JSONDecodable
+    // MARK: - Mappable
     
-    required init(json: JSON) throws {
-        self.name  = try json.string("name")
-        self.email = try json.string("email", alongPath: [.MissingKeyBecomesNil, .NullBecomesNil])
-        self.token = try json.string("token", alongPath: [.MissingKeyBecomesNil, .NullBecomesNil])
+    override func mapping(map: Map) {
+        super.mapping(map)
         
-        try super.init(json: json)
+        name  <- map["id"]
+        email <- map["email"]
+        token <- map["token"]
     }
-    
 }
