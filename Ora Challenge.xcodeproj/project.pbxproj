@@ -41,6 +41,8 @@
 		FAAF0F501D6BD30E00433DC7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */; };
 		FAAF0F521D6BD38E00433DC7 /* UITableView+Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F511D6BD38E00433DC7 /* UITableView+Registration.swift */; };
 		FAAF0F541D6BD7CC00433DC7 /* NSDate+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F531D6BD7CC00433DC7 /* NSDate+Utility.swift */; };
+		FAAF0F561D6BF03F00433DC7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F551D6BF03F00433DC7 /* TableViewCell.swift */; };
+		FAAF0F591D6BF06000433DC7 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F581D6BF06000433DC7 /* Updatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		FAAF0F511D6BD38E00433DC7 /* UITableView+Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Registration.swift"; sourceTree = "<group>"; };
 		FAAF0F531D6BD7CC00433DC7 /* NSDate+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utility.swift"; sourceTree = "<group>"; };
+		FAAF0F551D6BF03F00433DC7 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FAAF0F581D6BF06000433DC7 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				FAAF0F301D6A405D00433DC7 /* View.swift */,
+				FAAF0F571D6BF04D00433DC7 /* Protocols */,
+				FAAF0F551D6BF03F00433DC7 /* TableViewCell.swift */,
 				FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */,
 				FAAF0F321D6A431600433DC7 /* Form */,
 			);
@@ -274,6 +280,14 @@
 				FAAF0F4D1D6BD2AF00433DC7 /* ChatTableViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		FAAF0F571D6BF04D00433DC7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F581D6BF06000433DC7 /* Updatable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,8 +423,10 @@
 				FAAF0F2C1D6A3F5300433DC7 /* UIView+Unarchiving.swift in Sources */,
 				FAAF0F501D6BD30E00433DC7 /* ReusableView.swift in Sources */,
 				FAAF0F4E1D6BD2AF00433DC7 /* ChatTableViewCell.swift in Sources */,
+				FAAF0F561D6BF03F00433DC7 /* TableViewCell.swift in Sources */,
 				FAAF0F401D6BAF1700433DC7 /* Services+Chat.swift in Sources */,
 				FAAF0F521D6BD38E00433DC7 /* UITableView+Registration.swift in Sources */,
+				FAAF0F591D6BF06000433DC7 /* Updatable.swift in Sources */,
 				FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */,
 				FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */,
 				FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */,
