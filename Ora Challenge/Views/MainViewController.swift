@@ -13,6 +13,16 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var loginContainerView: UIView!
     /** Top container controller over main app content */
     private var loginViewController: LoginViewController!
+    /** Container with tab bar controller's view */
+    @IBOutlet private weak var tabContainerView: UIView!
+    /** Main tab container with app content */
+    private var tabController: UITabBarController!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tabController.tabBar.tintColor = UIColor.oraOrange()
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
@@ -20,6 +30,9 @@ class MainViewController: UIViewController {
         if let controller = segue.destinationViewController as? LoginViewController {
             loginViewController = controller
             loginViewController.delegate = self
+        }
+        else if let controller = segue.destinationViewController as? UITabBarController {
+            tabController = controller
         }
     }
 }

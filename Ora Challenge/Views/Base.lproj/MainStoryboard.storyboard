@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxk-uq-mfO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="wZz-yu-8Cq" kind="embed" id="Fen-Ma-3Wh"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIY-rp-eMa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
@@ -29,11 +35,16 @@
                             <constraint firstItem="cIY-rp-eMa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9mQ-yU-JEH"/>
                             <constraint firstItem="cIY-rp-eMa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EFK-oz-uPT"/>
                             <constraint firstAttribute="trailing" secondItem="cIY-rp-eMa" secondAttribute="trailing" id="KCl-Xl-7Ap"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uxk-uq-mfO" secondAttribute="bottom" id="NcH-8Q-h1b"/>
+                            <constraint firstItem="uxk-uq-mfO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="OY3-VS-fAi"/>
+                            <constraint firstAttribute="trailing" secondItem="uxk-uq-mfO" secondAttribute="trailing" id="Pn1-Mh-0cA"/>
+                            <constraint firstItem="uxk-uq-mfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WVF-3B-oiZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cIY-rp-eMa" secondAttribute="bottom" id="tkc-m4-TbH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginContainerView" destination="cIY-rp-eMa" id="omX-Nd-FDd"/>
+                        <outlet property="tabContainerView" destination="uxk-uq-mfO" id="85P-mu-j3T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -48,5 +59,35 @@
             </objects>
             <point key="canvasLocation" x="889.5" y="336"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4Wo-Lw-Vax">
+            <objects>
+                <tabBarController id="wZz-yu-8Cq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5ZP-Ez-gqU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YPm-Xs-FVF" kind="relationship" relationship="viewControllers" id="wwI-Hn-xxh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AyU-eL-MIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="1083"/>
+        </scene>
+        <!--ChatListViewController-->
+        <scene sceneID="WAZ-gj-ESm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ChatListStoryboard" referencedIdentifier="ChatListViewController" id="YPm-Xs-FVF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" image="ChatListIcon" id="9Xc-AQ-Z5g"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJZ-XO-QY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190.5" y="1548"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ChatListIcon" width="20" height="14"/>
+    </resources>
 </document>

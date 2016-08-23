@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat List View Controller-->
+        <scene sceneID="Fe1-jW-PN6">
+            <objects>
+                <viewController storyboardIdentifier="ChatListViewController" id="qEN-Bs-a2E" customClass="ChatListViewController" customModule="Ora_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cks-x2-7Is"/>
+                        <viewControllerLayoutGuide type="bottom" id="PwU-8c-2XQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MWs-DK-7jV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSy-8z-0BI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PwU-8c-2XQ" firstAttribute="top" secondItem="qSy-8z-0BI" secondAttribute="bottom" id="GBT-8V-m6F"/>
+                            <constraint firstItem="qSy-8z-0BI" firstAttribute="top" secondItem="MWs-DK-7jV" secondAttribute="topMargin" id="RsC-Ej-Q4Y"/>
+                            <constraint firstItem="qSy-8z-0BI" firstAttribute="leading" secondItem="MWs-DK-7jV" secondAttribute="leading" id="Xww-hy-wwr"/>
+                            <constraint firstAttribute="trailing" secondItem="qSy-8z-0BI" secondAttribute="trailing" id="tez-5V-rVM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Maw-sF-Tbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="392"/>
+        </scene>
+    </scenes>
+</document>

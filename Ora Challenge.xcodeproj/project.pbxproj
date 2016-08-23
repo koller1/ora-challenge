@@ -36,6 +36,8 @@
 		FAAF0F3E1D6BA92700433DC7 /* UINavigationBar+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */; };
 		FAAF0F401D6BAF1700433DC7 /* Services+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F3F1D6BAF1700433DC7 /* Services+Chat.swift */; };
 		FAAF0F421D6BAF1D00433DC7 /* Services+Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F411D6BAF1D00433DC7 /* Services+Messages.swift */; };
+		FAAF0F481D6BCB7900433DC7 /* ChatListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F471D6BCB7900433DC7 /* ChatListStoryboard.storyboard */; };
+		FAAF0F4A1D6BCB8D00433DC7 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F491D6BCB8D00433DC7 /* ChatListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Utility.swift"; sourceTree = "<group>"; };
 		FAAF0F3F1D6BAF1700433DC7 /* Services+Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Services+Chat.swift"; sourceTree = "<group>"; };
 		FAAF0F411D6BAF1D00433DC7 /* Services+Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Services+Messages.swift"; sourceTree = "<group>"; };
+		FAAF0F471D6BCB7900433DC7 /* ChatListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatListStoryboard.storyboard; sourceTree = "<group>"; };
+		FAAF0F491D6BCB8D00433DC7 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 				FA1CA53B1D690679002A7E8B /* LaunchScreen.storyboard */,
 				FA1CA5451D690770002A7E8B /* Main */,
 				FAAF0F261D6A3A6C00433DC7 /* Login */,
+				FAAF0F461D6BCB4A00433DC7 /* Chat List */,
 				FAAF0F2F1D6A404800433DC7 /* Shared */,
 			);
 			path = Views;
@@ -245,6 +250,15 @@
 			name = Shared;
 			sourceTree = "<group>";
 		};
+		FAAF0F461D6BCB4A00433DC7 /* Chat List */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F471D6BCB7900433DC7 /* ChatListStoryboard.storyboard */,
+				FAAF0F491D6BCB8D00433DC7 /* ChatListViewController.swift */,
+			);
+			name = "Chat List";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1CA54D1D690877002A7E8B /* MainStoryboard.storyboard in Resources */,
+				FAAF0F481D6BCB7900433DC7 /* ChatListStoryboard.storyboard in Resources */,
 				FA1CA54C1D690870002A7E8B /* LaunchScreen.storyboard in Resources */,
 				FA1CA53A1D690679002A7E8B /* Assets.xcassets in Resources */,
 				FAAF0F361D6A438700433DC7 /* SignInField.xib in Resources */,
@@ -387,6 +402,7 @@
 				FA1CA5531D6925DA002A7E8B /* Request.swift in Sources */,
 				FAAF0F1F1D6A2A2A00433DC7 /* Message.swift in Sources */,
 				FAAF0F231D6A322F00433DC7 /* Pagination.swift in Sources */,
+				FAAF0F4A1D6BCB8D00433DC7 /* ChatListViewController.swift in Sources */,
 				FAAF0F3A1D6BA77C00433DC7 /* UIColor+Utility.swift in Sources */,
 				FAAF0F2E1D6A3F5900433DC7 /* UIView+AutoLayout.swift in Sources */,
 				FA1CA54F1D691DA9002A7E8B /* Services.swift in Sources */,
