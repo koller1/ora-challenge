@@ -22,8 +22,8 @@ class Message: Model {
     override func mapping(map: Map) {
         super.mapping(map)
         
-        chatId  <- map["chatId"]
-        userId  <- map["userId"]
+        chatId  <- map["chat_id"]
+        userId  <- map["user_id"]
         text    <- map["message"]
         created <- (map["created"], DateFormatterTransform(dateFormatter: NSDate.servicesFormatter()))
         user    <- map["user"]
