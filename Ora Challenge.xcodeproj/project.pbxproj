@@ -38,6 +38,9 @@
 		FAAF0F421D6BAF1D00433DC7 /* Services+Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F411D6BAF1D00433DC7 /* Services+Messages.swift */; };
 		FAAF0F481D6BCB7900433DC7 /* ChatListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F471D6BCB7900433DC7 /* ChatListStoryboard.storyboard */; };
 		FAAF0F4A1D6BCB8D00433DC7 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F491D6BCB8D00433DC7 /* ChatListViewController.swift */; };
+		FAAF0F4E1D6BD2AF00433DC7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F4D1D6BD2AF00433DC7 /* ChatTableViewCell.swift */; };
+		FAAF0F501D6BD30E00433DC7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */; };
+		FAAF0F521D6BD38E00433DC7 /* UITableView+Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F511D6BD38E00433DC7 /* UITableView+Registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		FAAF0F411D6BAF1D00433DC7 /* Services+Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Services+Messages.swift"; sourceTree = "<group>"; };
 		FAAF0F471D6BCB7900433DC7 /* ChatListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatListStoryboard.storyboard; sourceTree = "<group>"; };
 		FAAF0F491D6BCB8D00433DC7 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		FAAF0F4D1D6BD2AF00433DC7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		FAAF0F511D6BD38E00433DC7 /* UITableView+Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Registration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 				FAAF0F241D6A374100433DC7 /* UIViewController+Utility.swift */,
 				FAAF0F2D1D6A3F5900433DC7 /* UIView+AutoLayout.swift */,
 				FAAF0F2B1D6A3F5300433DC7 /* UIView+Unarchiving.swift */,
+				FAAF0F511D6BD38E00433DC7 /* UITableView+Registration.swift */,
 				FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */,
 				FAAF0F391D6BA77C00433DC7 /* UIColor+Utility.swift */,
 			);
@@ -228,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAF0F301D6A405D00433DC7 /* View.swift */,
+				FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */,
 				FAAF0F321D6A431600433DC7 /* Form */,
 			);
 			name = Shared;
@@ -255,8 +263,17 @@
 			children = (
 				FAAF0F471D6BCB7900433DC7 /* ChatListStoryboard.storyboard */,
 				FAAF0F491D6BCB8D00433DC7 /* ChatListViewController.swift */,
+				FAAF0F4C1D6BD29C00433DC7 /* Cells */,
 			);
 			name = "Chat List";
+			sourceTree = "<group>";
+		};
+		FAAF0F4C1D6BD29C00433DC7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F4D1D6BD2AF00433DC7 /* ChatTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +408,10 @@
 				FA1CA5351D690679002A7E8B /* MainViewController.swift in Sources */,
 				FAAF0F311D6A405D00433DC7 /* View.swift in Sources */,
 				FAAF0F2C1D6A3F5300433DC7 /* UIView+Unarchiving.swift in Sources */,
+				FAAF0F501D6BD30E00433DC7 /* ReusableView.swift in Sources */,
+				FAAF0F4E1D6BD2AF00433DC7 /* ChatTableViewCell.swift in Sources */,
 				FAAF0F401D6BAF1700433DC7 /* Services+Chat.swift in Sources */,
+				FAAF0F521D6BD38E00433DC7 /* UITableView+Registration.swift in Sources */,
 				FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */,
 				FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */,
 				FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */,

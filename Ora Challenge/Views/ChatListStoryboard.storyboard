@@ -20,6 +20,48 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSy-8z-0BI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewCell" rowHeight="200" id="kG5-z0-Dyy" customClass="ChatTableViewCell" customModule="Ora_Challenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kG5-z0-Dyy" id="WYr-js-xmt">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tI-vH-5L1">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss6-jx-LC3">
+                                                    <rect key="frame" x="15" y="62" width="570" height="122.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-2L-ZiN">
+                                                    <rect key="frame" x="15" y="31" width="570" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ss6-jx-LC3" firstAttribute="leading" secondItem="iXz-2L-ZiN" secondAttribute="leading" id="3gj-6Y-NT7"/>
+                                                <constraint firstItem="ss6-jx-LC3" firstAttribute="trailing" secondItem="iXz-2L-ZiN" secondAttribute="trailing" id="CnR-2X-Qcr"/>
+                                                <constraint firstItem="iXz-2L-ZiN" firstAttribute="leading" secondItem="4tI-vH-5L1" secondAttribute="leading" id="R6M-hR-79c"/>
+                                                <constraint firstItem="4tI-vH-5L1" firstAttribute="leading" secondItem="WYr-js-xmt" secondAttribute="leading" constant="15" id="S4p-mL-b4p"/>
+                                                <constraint firstAttribute="trailing" secondItem="4tI-vH-5L1" secondAttribute="trailing" constant="15" id="Vsa-YC-n5f"/>
+                                                <constraint firstAttribute="bottom" secondItem="ss6-jx-LC3" secondAttribute="bottom" constant="15" id="ZPb-8u-unk"/>
+                                                <constraint firstItem="4tI-vH-5L1" firstAttribute="top" secondItem="WYr-js-xmt" secondAttribute="top" id="eP7-gf-Yg9"/>
+                                                <constraint firstItem="ss6-jx-LC3" firstAttribute="top" secondItem="iXz-2L-ZiN" secondAttribute="bottom" constant="10" id="hHk-nu-7Ij"/>
+                                                <constraint firstItem="iXz-2L-ZiN" firstAttribute="top" secondItem="4tI-vH-5L1" secondAttribute="bottom" constant="10" id="lI0-X8-X69"/>
+                                                <constraint firstItem="iXz-2L-ZiN" firstAttribute="trailing" secondItem="4tI-vH-5L1" secondAttribute="trailing" id="mo6-Lo-39U"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
