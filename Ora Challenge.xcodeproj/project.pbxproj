@@ -51,6 +51,7 @@
 		FAAF0F691D6C15E900433DC7 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F681D6C15E900433DC7 /* Geometry.swift */; };
 		FAAF0F6B1D6C27FB00433DC7 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */; };
 		FAAF0F721D6C467F00433DC7 /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F711D6C467F00433DC7 /* Dictionary+Utility.swift */; };
+		FAD03C9B1D6CB05C002A9172 /* NSNotificationCenter+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD03C9A1D6CB05C002A9172 /* NSNotificationCenter+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		FAAF0F681D6C15E900433DC7 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		FAAF0F711D6C467F00433DC7 /* Dictionary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utility.swift"; sourceTree = "<group>"; };
+		FAD03C9A1D6CB05C002A9172 /* NSNotificationCenter+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 				FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */,
 				FAAF0F391D6BA77C00433DC7 /* UIColor+Utility.swift */,
 				FAAF0F711D6C467F00433DC7 /* Dictionary+Utility.swift */,
+				FAD03C9A1D6CB05C002A9172 /* NSNotificationCenter+Utility.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				FAAF0F591D6BF06000433DC7 /* Updatable.swift in Sources */,
 				FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */,
 				FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */,
+				FAD03C9B1D6CB05C002A9172 /* NSNotificationCenter+Utility.swift in Sources */,
 				FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */,
 				FAAF0F661D6C096200433DC7 /* RestorableConstraint.swift in Sources */,
 				FAAF0F251D6A374100433DC7 /* UIViewController+Utility.swift in Sources */,
