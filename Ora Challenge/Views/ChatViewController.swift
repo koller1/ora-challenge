@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class ChatViewController: UIViewController {
+class ChatViewController: ViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     /** The chat associated with this controller */

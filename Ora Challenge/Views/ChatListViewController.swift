@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatListViewController: UIViewController {
+class ChatListViewController: ViewController {
     
     struct ChatSection {
         let section: Int
@@ -83,6 +83,12 @@ class ChatListViewController: UIViewController {
         chatSections.append(ChatSection(section: section, chats: dayChats))
         
         tableView.reloadData()
+    }
+    
+    // MARK: - ViewController
+    
+    override var requiresKeyboardSupport: Bool {
+        return true
     }
 }
 

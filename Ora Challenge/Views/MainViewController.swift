@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: ViewController {
     private enum ControllerTab: Int {
         /** Nav controller with chat UI */
         case Chats

@@ -14,7 +14,7 @@ protocol LoginViewControllerDelegate {
     func didCompleteLogin(user: User)
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: ViewController {
     
     enum LoginViewState {
         case Login
@@ -176,6 +176,12 @@ class LoginViewController: UIViewController {
 //        UserManager.sharedInstance.updateUser(<#T##user: User##User#>) { (user, error) in
             // saved!
 //        }
+    }
+    
+    // MARK: - ViewController
+    
+    override var requiresKeyboardSupport: Bool {
+        return true
     }
 }
 
