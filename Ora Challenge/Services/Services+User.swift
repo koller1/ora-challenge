@@ -12,7 +12,7 @@ import Freddy
 extension Services {
     typealias UserServicesHandler = (User?, NSError?) -> Void
     
-    func register(name: String, email: String, password: String, confirm: String, handler: UserServicesHandler) -> NetworkCancelable {
+    func register(name name: String, email: String, password: String, confirm: String, handler: UserServicesHandler) -> NetworkCancelable {
         let request = Request(post: "\(servicesPath)users/register")
         request.parameters = [
             "name":     name,
@@ -24,7 +24,7 @@ extension Services {
         return startRequest(request, handler: handler)
     }
     
-    func login(email: String, password: String, handler: UserServicesHandler) -> NetworkCancelable {
+    func login(email email: String, password: String, handler: UserServicesHandler) -> NetworkCancelable {
         let request = Request(post: "\(servicesPath)users/login")
         request.parameters = [
             "email":    email,

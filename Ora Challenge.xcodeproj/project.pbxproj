@@ -46,6 +46,7 @@
 		FAAF0F5C1D6BF0E600433DC7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F5B1D6BF0E600433DC7 /* ChatViewController.swift */; };
 		FAAF0F5E1D6BF0F300433DC7 /* ChatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */; };
 		FAAF0F611D6BF38100433DC7 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */; };
+		FAAF0F641D6BF49200433DC7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F631D6BF49200433DC7 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		FAAF0F5B1D6BF0E600433DC7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatStoryboard.storyboard; sourceTree = "<group>"; };
 		FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		FAAF0F631D6BF49200433DC7 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				FA1CA5441D69076A002A7E8B /* Views */,
 				FA1CA5491D6907BD002A7E8B /* Models */,
 				FA1CA5471D6907A0002A7E8B /* Services */,
+				FAAF0F621D6BF47C00433DC7 /* Managers */,
 				FA1CA54A1D6907C6002A7E8B /* Categories */,
 				FA1CA5461D69079C002A7E8B /* Assets */,
 				FA1CA5481D6907AB002A7E8B /* Supporting Files */,
@@ -315,6 +318,15 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		FAAF0F621D6BF47C00433DC7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F631D6BF49200433DC7 /* UserManager.swift */,
+			);
+			name = Managers;
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -449,6 +461,7 @@
 				FAAF0F2C1D6A3F5300433DC7 /* UIView+Unarchiving.swift in Sources */,
 				FAAF0F501D6BD30E00433DC7 /* ReusableView.swift in Sources */,
 				FAAF0F4E1D6BD2AF00433DC7 /* ChatTableViewCell.swift in Sources */,
+				FAAF0F641D6BF49200433DC7 /* UserManager.swift in Sources */,
 				FAAF0F561D6BF03F00433DC7 /* TableViewCell.swift in Sources */,
 				FAAF0F401D6BAF1700433DC7 /* Services+Chat.swift in Sources */,
 				FAAF0F521D6BD38E00433DC7 /* UITableView+Registration.swift in Sources */,

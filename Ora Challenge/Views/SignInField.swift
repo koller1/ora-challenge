@@ -14,7 +14,11 @@ class SignInField: View {
     @IBOutlet private weak var textField: UITextField!
     
     var value: String {
-        return textField.text ?? ""
+        get {
+            return textField.text ?? ""
+        } set {
+            textField.text = newValue
+        }
     }
     
     var model: SignInFieldModel? {

@@ -9,6 +9,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    private enum ControllerTab: Int {
+        /** Nav controller with chat UI */
+        case Chats
+        /** Account view controller */
+        case Account
+    }
+    
     /** Container with login view controller's view */
     @IBOutlet private weak var loginContainerView: UIView!
     /** Top container controller over main app content */
@@ -17,11 +24,25 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var tabContainerView: UIView!
     /** Main tab container with app content */
     private var tabController: UITabBarController!
+    /** Chats navigation controller */
+    private var chatsNavigationController: UINavigationController? {
+        return tabController.viewControllers?[ControllerTab.Chats.rawValue] as? UINavigationController
+    }
+    /** Account viewer in second tab of tab controller */
+    private var accountViewController: LoginViewController? {
+        return tabController.viewControllers?[ControllerTab.Account.rawValue] as? LoginViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tabController.tabBar.tintColor = UIColor.oraOrange()
+        
+        chatsNavigationController?.navigationBar.oraStylize()
+        
+        // setup login controller initial states
+        loginViewController.currentState    = .Login
+        accountViewController?.currentState = .Account
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

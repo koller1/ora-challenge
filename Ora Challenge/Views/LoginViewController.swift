@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 protocol LoginViewControllerDelegate {
     /** Called when user completes a login or registration */
@@ -15,16 +16,31 @@ protocol LoginViewControllerDelegate {
 
 class LoginViewController: UIViewController {
     
-    private enum LoginViewState {
+    enum LoginViewState {
         case Login
         case Register
+        case Account
         
-        var leftBarButtonTitle: String {
-            return self == .Login ? "Register" : "Login"
+        var leftBarButtonTitle: String? {
+            switch self {
+            case .Login:
+                return "Register"
+            case .Register:
+                return "Login"
+            case .Account:
+                return nil
+            }
         }
         
-        var rightBarButtonTitle: String {
-            return self == .Login ? "Login" : "Register"
+        var rightBarButtonTitle: String? {
+            switch self {
+            case .Login:
+                return "Login"
+            case .Register:
+                return "Register"
+            case .Account:
+                return "Save"
+            }
         }
         
         var hidesNameField: Bool {
@@ -55,9 +71,14 @@ class LoginViewController: UIViewController {
     @IBOutlet private var fields: [SignInField]!
     
     /** Current UI state of view */
-    private var currentState: LoginViewState = .Login {
+    var currentState: LoginViewState? {
         didSet {
-            changeState(currentState)
+            guard let currentState = currentState where isViewLoaded() else {
+                return
+            }
+            
+            // only animate changes from other states
+            changeState(currentState, animated: oldValue != nil)
         }
     }
     
@@ -70,21 +91,31 @@ class LoginViewController: UIViewController {
         // style navigation bar
         navigationBar.oraStylize()
         
-        // setup initial state
-        changeState(currentState)
+        // update ui with state on load
+        if let currentState = currentState {
+            changeState(currentState, animated: false)
+        }
     }
     
     // MARK: - Actions
     
     @IBAction func didTapLeftBarButtonItem(sender: AnyObject) {
+        // left bar button is hidden when .Account
         currentState = currentState == .Login ? .Register : .Login
     }
     
     @IBAction func didTapRightBarButtonItem(sender: AnyObject) {
-        if currentState == .Login {
-            login(emailField.value, password: passwordField.value)
-        } else {
-            register(nameField.value, email: emailField.value, password: passwordField.value, confirm: confirmField.value)
+        guard let state = currentState else {
+            return
+        }
+        
+        switch state {
+        case .Login:
+            login(email: emailField.value, password: passwordField.value)
+        case .Register:
+            register(name: nameField.value, email: emailField.value, password: passwordField.value, confirm: confirmField.value)
+        case .Account:
+            update(name: nameField.value, email: emailField.value, password: passwordField.value, confirm: confirmField.value)
         }
     }
     
@@ -92,13 +123,19 @@ class LoginViewController: UIViewController {
     // Helpers
     //
     
-    private func changeState(state: LoginViewState) {
-        let duration = 0.6
+    private func changeState(state: LoginViewState, animated: Bool) {
+        let duration = animated ? 0.6 : 0
         
         // swap bar button titles
         UIView.transitionWithView(formStackView, duration: duration, options: [.TransitionCrossDissolve], animations: {
             self.leftBarButtonItem.title  = state.leftBarButtonTitle
             self.rightBarButtonItem.title = state.rightBarButtonTitle
+            
+            // display user info if needed
+            if let user = UserManager.sharedInstance.currentUser where state == .Account {
+                self.nameField.value  = user.name
+                self.emailField.value = user.email ?? ""
+            }
         }, completion: nil)
         
         // toggle visibility of fields
@@ -113,8 +150,8 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func login(email: String, password: String) {
-        Services.sharedInstance.login(email, password: password) { (user, error) in
+    private func login(email email: String, password: String) {
+        UserManager.sharedInstance.authenticateWithEmail(email, password: password) { (user, error) in
             guard let user = user else {
                 return
             }
@@ -123,14 +160,22 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func register(name: String, email: String, password: String, confirm: String) {
-        Services.sharedInstance.register(name, email: email, password: password, confirm: confirm) { (user, error) in
+    private func register(name name: String, email: String, password: String, confirm: String) {
+        UserManager.sharedInstance.registerWithName(name: name, email: email, password: password, confirm: confirm) { (user, error) in
             guard let user = user else {
                 return
             }
             
             self.delegate?.didCompleteLogin(user)
         }
+    }
+    
+    private func update(name name: String, email: String, password: String, confirm: String) {
+        
+        
+//        UserManager.sharedInstance.updateUser(<#T##user: User##User#>) { (user, error) in
+            // saved!
+//        }
     }
 }
 
