@@ -21,10 +21,26 @@ class Services {
     
     /** Client configured for connecting to services */
     private var httpClient: Manager = {
+        return Services.constructHttpClient()
+    }()
+    /** Additional headers to send with every request */
+    var additionalHeaders: [NSObject: AnyObject]? {
+        didSet {
+            httpClient = Services.constructHttpClient(headers: additionalHeaders)
+        }
+    }
+    
+    static private func constructHttpClient(headers headers: [NSObject: AnyObject]? = nil) -> Manager {
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         
+        configuration.HTTPAdditionalHeaders = [
+            "Content-Type": "application/json; charset=utf-8",
+            "Accept": "application/json"
+        ].merge(headers)
+        
         return Manager(configuration: configuration)
-    }()
+        
+    }
     
     // MARK: - Parsing
     

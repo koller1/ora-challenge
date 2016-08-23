@@ -50,6 +50,7 @@
 		FAAF0F661D6C096200433DC7 /* RestorableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F651D6C096200433DC7 /* RestorableConstraint.swift */; };
 		FAAF0F691D6C15E900433DC7 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F681D6C15E900433DC7 /* Geometry.swift */; };
 		FAAF0F6B1D6C27FB00433DC7 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */; };
+		FAAF0F721D6C467F00433DC7 /* Dictionary+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F711D6C467F00433DC7 /* Dictionary+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		FAAF0F651D6C096200433DC7 /* RestorableConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorableConstraint.swift; sourceTree = "<group>"; };
 		FAAF0F681D6C15E900433DC7 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		FAAF0F711D6C467F00433DC7 /* Dictionary+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				FAAF0F511D6BD38E00433DC7 /* UITableView+Registration.swift */,
 				FAAF0F3D1D6BA92700433DC7 /* UINavigationBar+Utility.swift */,
 				FAAF0F391D6BA77C00433DC7 /* UIColor+Utility.swift */,
+				FAAF0F711D6C467F00433DC7 /* Dictionary+Utility.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				FAAF0F691D6C15E900433DC7 /* Geometry.swift in Sources */,
 				FAAF0F6B1D6C27FB00433DC7 /* BubbleView.swift in Sources */,
 				FA1CA54F1D691DA9002A7E8B /* Services.swift in Sources */,
+				FAAF0F721D6C467F00433DC7 /* Dictionary+Utility.swift in Sources */,
 				FA1CA5331D690679002A7E8B /* AppDelegate.swift in Sources */,
 				FAAF0F611D6BF38100433DC7 /* MessageTableViewCell.swift in Sources */,
 				FAAF0F3E1D6BA92700433DC7 /* UINavigationBar+Utility.swift in Sources */,

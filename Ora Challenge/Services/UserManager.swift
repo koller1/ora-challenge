@@ -15,7 +15,11 @@ class UserManager {
     static var sharedInstance = UserManager()
     
     /** The presently authenticated user */
-    private (set) var currentUser: User?
+    private (set) var currentUser: User? {
+        didSet {
+            didSetUser(currentUser)
+        }
+    }
     
     // MARK: - Registration
     
@@ -41,5 +45,20 @@ class UserManager {
     
     func updateUser(user: User, handler: UserManagerHandler) {
         // TODO: Implement
+    }
+    
+    private func didSetUser(user: User?) {
+        // make sure outgoing requests are authenticated with latest user
+        updateAuthenticationHeaders(user)
+    }
+    
+    private func updateAuthenticationHeaders(user: User?) {
+        var headers: [NSObject: AnyObject] = [:]
+        
+        if let token = user?.token {
+            headers["Authorization"] = "Bearer \(token)"
+        }
+        
+        Services.sharedInstance.additionalHeaders = headers
     }
 }
