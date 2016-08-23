@@ -43,6 +43,9 @@
 		FAAF0F541D6BD7CC00433DC7 /* NSDate+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F531D6BD7CC00433DC7 /* NSDate+Utility.swift */; };
 		FAAF0F561D6BF03F00433DC7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F551D6BF03F00433DC7 /* TableViewCell.swift */; };
 		FAAF0F591D6BF06000433DC7 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F581D6BF06000433DC7 /* Updatable.swift */; };
+		FAAF0F5C1D6BF0E600433DC7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F5B1D6BF0E600433DC7 /* ChatViewController.swift */; };
+		FAAF0F5E1D6BF0F300433DC7 /* ChatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */; };
+		FAAF0F611D6BF38100433DC7 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		FAAF0F531D6BD7CC00433DC7 /* NSDate+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utility.swift"; sourceTree = "<group>"; };
 		FAAF0F551D6BF03F00433DC7 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		FAAF0F581D6BF06000433DC7 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		FAAF0F5B1D6BF0E600433DC7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatStoryboard.storyboard; sourceTree = "<group>"; };
+		FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 				FA1CA5451D690770002A7E8B /* Main */,
 				FAAF0F261D6A3A6C00433DC7 /* Login */,
 				FAAF0F461D6BCB4A00433DC7 /* Chat List */,
+				FAAF0F5A1D6BF0D800433DC7 /* Chat */,
 				FAAF0F2F1D6A404800433DC7 /* Shared */,
 			);
 			path = Views;
@@ -290,6 +297,24 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		FAAF0F5A1D6BF0D800433DC7 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */,
+				FAAF0F5B1D6BF0E600433DC7 /* ChatViewController.swift */,
+				FAAF0F5F1D6BF37000433DC7 /* Cells */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		FAAF0F5F1D6BF37000433DC7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1CA54D1D690877002A7E8B /* MainStoryboard.storyboard in Resources */,
+				FAAF0F5E1D6BF0F300433DC7 /* ChatStoryboard.storyboard in Resources */,
 				FAAF0F481D6BCB7900433DC7 /* ChatListStoryboard.storyboard in Resources */,
 				FA1CA53A1D690679002A7E8B /* Assets.xcassets in Resources */,
 				FAAF0F361D6A438700433DC7 /* SignInField.xib in Resources */,
@@ -443,7 +469,9 @@
 				FAAF0F2E1D6A3F5900433DC7 /* UIView+AutoLayout.swift in Sources */,
 				FA1CA54F1D691DA9002A7E8B /* Services.swift in Sources */,
 				FA1CA5331D690679002A7E8B /* AppDelegate.swift in Sources */,
+				FAAF0F611D6BF38100433DC7 /* MessageTableViewCell.swift in Sources */,
 				FAAF0F3E1D6BA92700433DC7 /* UINavigationBar+Utility.swift in Sources */,
+				FAAF0F5C1D6BF0E600433DC7 /* ChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

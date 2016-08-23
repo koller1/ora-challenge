@@ -94,7 +94,7 @@ extension ChatListViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(ChatTableViewCell.reusableIdentifier(), forIndexPath: indexPath) as! ChatTableViewCell
-        let chat = chatSections[indexPath.section].chats[indexPath.row]
+        let chat = chatForIndexPath(indexPath)
         
         cell.updateWithModel(chat)
         
@@ -105,6 +105,14 @@ extension ChatListViewController: UITableViewDataSource {
         let date = chatSections[section].date
         
         return date.isToday() ? "Today" : date.chatDateString()
+    }
+    
+    //
+    // Helpers
+    //
+    
+    func chatForIndexPath(indexPath: NSIndexPath) -> Chat {
+        return chatSections[indexPath.section].chats[indexPath.row]
     }
     
 }
@@ -119,7 +127,10 @@ extension ChatListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        // TODO: show chat detail
+        let chat = chatForIndexPath(indexPath)
+        let controller = ChatViewController.instanceWithChat(chat)
+        
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

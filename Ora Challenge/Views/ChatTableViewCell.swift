@@ -15,6 +15,8 @@ class ChatTableViewCell: TableViewCell {
     @IBOutlet private weak var previewLabel: UILabel!
 
     override func updateWithModel<T: Chat>(model: T) {
+        super.updateWithModel(model)
+        
         titleLabel.text    = model.name
         activityLabel.text = constructRecentActivityTitle(model)
         previewLabel.text  = model.lastMessage?.text

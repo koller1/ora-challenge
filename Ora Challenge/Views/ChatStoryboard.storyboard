@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="LhA-ce-6HM">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="5fi-jU-Byf" customClass="ChatViewController" customModule="Ora_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1SW-Ee-ihe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kr6-7v-1jr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4bH-qk-PLj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-82-l5U">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YAH-Zq-piK" customClass="MessageTableViewCell" customModule="Ora_Challenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YAH-Zq-piK" id="ucN-c6-QrF">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kr6-7v-1jr" firstAttribute="top" secondItem="b6j-82-l5U" secondAttribute="bottom" id="8UO-RX-yNu"/>
+                            <constraint firstItem="b6j-82-l5U" firstAttribute="top" secondItem="1SW-Ee-ihe" secondAttribute="bottom" id="BNw-7a-D8v"/>
+                            <constraint firstItem="b6j-82-l5U" firstAttribute="leading" secondItem="4bH-qk-PLj" secondAttribute="leading" id="Upx-1H-hEC"/>
+                            <constraint firstAttribute="trailing" secondItem="b6j-82-l5U" secondAttribute="trailing" id="hEQ-Vk-SBV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="b6j-82-l5U" id="OcX-zG-Ouf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5w-VH-T4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="538"/>
+        </scene>
+    </scenes>
+</document>
