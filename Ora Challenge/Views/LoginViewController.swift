@@ -133,7 +133,7 @@ class LoginViewController: UIViewController {
             
             // display user info if needed
             if let user = UserManager.sharedInstance.currentUser where state == .Account {
-                self.nameField.value  = user.name
+                self.nameField.value  = user.name ?? ""
                 self.emailField.value = user.email ?? ""
             }
         }, completion: nil)

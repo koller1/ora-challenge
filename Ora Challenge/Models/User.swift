@@ -11,9 +11,9 @@ import ObjectMapper
 
 class User: Model {
     
-    private (set) var name: String!
+    private (set) var name: String?
     private (set) var email: String?
-    private (set) var token: String?
+    private (set) var token: String
     
     // MARK: - Mappable
     
