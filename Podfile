@@ -5,4 +5,5 @@ use_frameworks!
 target 'Ora Challenge' do
     pod 'Alamofire', '~> 3.4'
     pod 'ObjectMapper', '~> 1.3'
+    pod 'CocoaLumberjack/Swift'
 end

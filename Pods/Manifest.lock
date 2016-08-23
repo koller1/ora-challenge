@@ -1,13 +1,22 @@
 PODS:
   - Alamofire (3.4.1)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - CocoaLumberjack/Swift (2.3.0):
+    - CocoaLumberjack/Extensions
   - ObjectMapper (1.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - CocoaLumberjack/Swift
   - ObjectMapper (~> 1.3)
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
 
 COCOAPODS: 0.39.0

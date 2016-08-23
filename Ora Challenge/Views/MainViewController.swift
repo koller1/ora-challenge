@@ -51,8 +51,6 @@ class MainViewController: UIViewController {
         if let controller = segue.destinationViewController as? LoginViewController {
             loginViewController = controller
             loginViewController.delegate = self
-            
-            loginContainerView.alpha = 0.0
         }
         else if let controller = segue.destinationViewController as? UITabBarController {
             tabController = controller

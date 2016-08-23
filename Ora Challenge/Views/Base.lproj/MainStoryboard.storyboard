@@ -98,7 +98,7 @@
         <scene sceneID="WAZ-gj-ESm">
             <objects>
                 <viewControllerPlaceholder storyboardName="ChatListStoryboard" referencedIdentifier="ChatListViewController" id="YPm-Xs-FVF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" image="6B1E4EEA-A915-4ABC-BB77-41D1CE63AB44" id="9Xc-AQ-Z5g"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="C00D041C-219B-42AB-9996-31B2C5CAEE39" id="9Xc-AQ-Z5g"/>
                     <navigationItem key="navigationItem" id="aUD-lj-0nW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJZ-XO-QY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,7 +117,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="6B1E4EEA-A915-4ABC-BB77-41D1CE63AB44" width="20" height="14">
+        <image name="C00D041C-219B-42AB-9996-31B2C5CAEE39" width="20" height="14">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
