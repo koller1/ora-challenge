@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class ChatViewController: UIViewController {
     
@@ -18,16 +19,19 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         fetchMessages()
     }
     
     private func fetchMessages() {
-        Services.sharedInstance.fetchMessages(chat.uid, page: 0) { (messages, error) in
+        Services.sharedInstance.fetchMessages(chat.uid) { (messages, error) in
             guard let messages = messages else {
                 return
             }
-            
+         
             self.messages = messages
             self.tableView.reloadData()
         }
@@ -53,20 +57,12 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(MessageTableViewCell.reusableIdentifier(), forIndexPath: indexPath) as! MessageTableViewCell
+        let cell    = tableView.dequeueReusableCellWithIdentifier(MessageTableViewCell.reusableIdentifier(), forIndexPath: indexPath) as! MessageTableViewCell
+        let message = messages[indexPath.row]
         
-        
+        cell.updateWithModel(message)
         
         return cell
-    }
-    
-}
-
-// MARK: - UITableViewDelegate
-extension ChatViewController: UITableViewDelegate {
-    
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
     }
     
 }

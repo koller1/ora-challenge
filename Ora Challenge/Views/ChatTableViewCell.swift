@@ -14,6 +14,8 @@ class ChatTableViewCell: TableViewCell {
     @IBOutlet private weak var activityLabel: UILabel!
     @IBOutlet private weak var previewLabel: UILabel!
 
+    // MARK: - Updatable
+    
     override func updateWithModel<T: Chat>(model: T) {
         super.updateWithModel(model)
         

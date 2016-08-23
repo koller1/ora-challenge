@@ -28,6 +28,11 @@ class ChatListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "OraChat"
+        
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         fetchChats("")
     }
     
@@ -119,10 +124,6 @@ extension ChatListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ChatListViewController: UITableViewDelegate {
-    
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
-    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)

@@ -47,6 +47,9 @@
 		FAAF0F5E1D6BF0F300433DC7 /* ChatStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */; };
 		FAAF0F611D6BF38100433DC7 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */; };
 		FAAF0F641D6BF49200433DC7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F631D6BF49200433DC7 /* UserManager.swift */; };
+		FAAF0F661D6C096200433DC7 /* RestorableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F651D6C096200433DC7 /* RestorableConstraint.swift */; };
+		FAAF0F691D6C15E900433DC7 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F681D6C15E900433DC7 /* Geometry.swift */; };
+		FAAF0F6B1D6C27FB00433DC7 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,9 @@
 		FAAF0F5D1D6BF0F300433DC7 /* ChatStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatStoryboard.storyboard; sourceTree = "<group>"; };
 		FAAF0F601D6BF38100433DC7 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		FAAF0F631D6BF49200433DC7 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		FAAF0F651D6C096200433DC7 /* RestorableConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorableConstraint.swift; sourceTree = "<group>"; };
+		FAAF0F681D6C15E900433DC7 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				FA1CA5471D6907A0002A7E8B /* Services */,
 				FAAF0F621D6BF47C00433DC7 /* Managers */,
 				FA1CA54A1D6907C6002A7E8B /* Categories */,
+				FAAF0F671D6C154400433DC7 /* Utilties */,
 				FA1CA5461D69079C002A7E8B /* Assets */,
 				FA1CA5481D6907AB002A7E8B /* Supporting Files */,
 			);
@@ -248,10 +255,12 @@
 		FAAF0F2F1D6A404800433DC7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				FAAF0F301D6A405D00433DC7 /* View.swift */,
 				FAAF0F571D6BF04D00433DC7 /* Protocols */,
+				FAAF0F301D6A405D00433DC7 /* View.swift */,
 				FAAF0F551D6BF03F00433DC7 /* TableViewCell.swift */,
 				FAAF0F4F1D6BD30E00433DC7 /* ReusableView.swift */,
+				FAAF0F651D6C096200433DC7 /* RestorableConstraint.swift */,
+				FAAF0F6A1D6C27FB00433DC7 /* BubbleView.swift */,
 				FAAF0F321D6A431600433DC7 /* Form */,
 			);
 			name = Shared;
@@ -325,6 +334,15 @@
 			);
 			name = Managers;
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FAAF0F671D6C154400433DC7 /* Utilties */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF0F681D6C15E900433DC7 /* Geometry.swift */,
+			);
+			name = Utilties;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +487,7 @@
 				FA1CA5551D692A9C002A7E8B /* Services+User.swift in Sources */,
 				FAAF0F211D6A306100433DC7 /* NSDate+Formatting.swift in Sources */,
 				FAAF0F1D1D6A2A2600433DC7 /* Chat.swift in Sources */,
+				FAAF0F661D6C096200433DC7 /* RestorableConstraint.swift in Sources */,
 				FAAF0F251D6A374100433DC7 /* UIViewController+Utility.swift in Sources */,
 				FAAF0F421D6BAF1D00433DC7 /* Services+Messages.swift in Sources */,
 				FAAF0F381D6A6C4B00433DC7 /* SignInFieldModel.swift in Sources */,
@@ -480,6 +499,8 @@
 				FAAF0F4A1D6BCB8D00433DC7 /* ChatListViewController.swift in Sources */,
 				FAAF0F3A1D6BA77C00433DC7 /* UIColor+Utility.swift in Sources */,
 				FAAF0F2E1D6A3F5900433DC7 /* UIView+AutoLayout.swift in Sources */,
+				FAAF0F691D6C15E900433DC7 /* Geometry.swift in Sources */,
+				FAAF0F6B1D6C27FB00433DC7 /* BubbleView.swift in Sources */,
 				FA1CA54F1D691DA9002A7E8B /* Services.swift in Sources */,
 				FA1CA5331D690679002A7E8B /* AppDelegate.swift in Sources */,
 				FAAF0F611D6BF38100433DC7 /* MessageTableViewCell.swift in Sources */,

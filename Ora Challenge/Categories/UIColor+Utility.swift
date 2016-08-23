@@ -18,4 +18,8 @@ extension UIColor {
         return UIColor(red: 0.01, green: 0.01, blue: 0.01, alpha: 1.00)
     }
     
+    static func oraGrey() -> UIColor {
+        return UIColor(red: 0.91, green: 0.91, blue: 0.92, alpha: 1.00)
+    }
+    
 }
