@@ -13,7 +13,7 @@ class Chat: Model {
     
     private (set) var userId: Int!
     private (set) var name: String!
-    private (set) var created: NSDate?
+    private (set) var created: NSDate!
     private (set) var user: User!
     private (set) var lastMessage: Message?
     

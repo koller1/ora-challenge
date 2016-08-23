@@ -20,11 +20,12 @@ extension NSDate {
     // see http://stackoverflow.com/questions/29814706/a-declaration-cannot-be-both-final-and-dynamic-error-in-swift-1-2/32831677
     // for @nonobjc explanation
     @nonobjc static let servicesDateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    @nonobjc static let chatDateFormat     = "MMM d"
     
     // MARK: - Stringifiers
     
-    func oraDateTimeString() -> String {
-        return NSDate.servicesFormatter().stringFromDate(self)
+    func chatDateString() -> String {
+        return NSDate.formatterForFormat(NSDate.chatDateFormat).stringFromDate(self)
     }
     
     // MARK: - Dateifiers
@@ -71,7 +72,6 @@ extension NSDate {
         formatter.timeZone  = NSTimeZone.localTimeZone()
         
         NSThread.currentThread().threadDictionary[key] = formatter
-        
         
         return formatter
     }

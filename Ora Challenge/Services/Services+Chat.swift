@@ -11,7 +11,7 @@ import Foundation
 extension Services {
     
     func fetchChats(query: String, page: Int = 1, limit: Int = 20, handler: ([Chat]?, NSError?) -> Void) -> NetworkCancelable {
-        let request = Request(get: "\(servicesPath)/chats")
+        let request = Request(get: "\(servicesPath)chats")
         request.parameters = [
             "q":     query,
             "page":  page,
@@ -22,7 +22,7 @@ extension Services {
     }
     
     func createChat(name: String, handler: (Chat?, NSError?) -> Void) -> NetworkCancelable {
-        let request = Request(post: "\(servicesPath)/chats")
+        let request = Request(post: "\(servicesPath)chats")
         request.parameters = [
             "name": name
         ]

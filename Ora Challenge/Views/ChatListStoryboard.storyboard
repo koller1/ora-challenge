@@ -17,8 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0QY-1Y-QZp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSy-8z-0BI">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTableViewCell" rowHeight="200" id="kG5-z0-Dyy" customClass="ChatTableViewCell" customModule="Ora_Challenge" customModuleProvider="target">
@@ -29,21 +33,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tI-vH-5L1">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="21"/>
+                                                    <rect key="frame" x="15" y="10" width="570" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss6-jx-LC3">
-                                                    <rect key="frame" x="15" y="62" width="570" height="122.5"/>
+                                                    <rect key="frame" x="15" y="62" width="570" height="127.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-2L-ZiN">
-                                                    <rect key="frame" x="15" y="31" width="570" height="21"/>
+                                                    <rect key="frame" x="15" y="36" width="570" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -53,29 +57,45 @@
                                                 <constraint firstItem="iXz-2L-ZiN" firstAttribute="leading" secondItem="4tI-vH-5L1" secondAttribute="leading" id="R6M-hR-79c"/>
                                                 <constraint firstItem="4tI-vH-5L1" firstAttribute="leading" secondItem="WYr-js-xmt" secondAttribute="leading" constant="15" id="S4p-mL-b4p"/>
                                                 <constraint firstAttribute="trailing" secondItem="4tI-vH-5L1" secondAttribute="trailing" constant="15" id="Vsa-YC-n5f"/>
-                                                <constraint firstAttribute="bottom" secondItem="ss6-jx-LC3" secondAttribute="bottom" constant="15" id="ZPb-8u-unk"/>
-                                                <constraint firstItem="4tI-vH-5L1" firstAttribute="top" secondItem="WYr-js-xmt" secondAttribute="top" id="eP7-gf-Yg9"/>
-                                                <constraint firstItem="ss6-jx-LC3" firstAttribute="top" secondItem="iXz-2L-ZiN" secondAttribute="bottom" constant="10" id="hHk-nu-7Ij"/>
-                                                <constraint firstItem="iXz-2L-ZiN" firstAttribute="top" secondItem="4tI-vH-5L1" secondAttribute="bottom" constant="10" id="lI0-X8-X69"/>
+                                                <constraint firstAttribute="bottom" secondItem="ss6-jx-LC3" secondAttribute="bottom" constant="10" id="ZPb-8u-unk"/>
+                                                <constraint firstItem="4tI-vH-5L1" firstAttribute="top" secondItem="WYr-js-xmt" secondAttribute="top" constant="10" id="eP7-gf-Yg9"/>
+                                                <constraint firstItem="ss6-jx-LC3" firstAttribute="top" secondItem="iXz-2L-ZiN" secondAttribute="bottom" constant="5" id="hHk-nu-7Ij"/>
+                                                <constraint firstItem="iXz-2L-ZiN" firstAttribute="top" secondItem="4tI-vH-5L1" secondAttribute="bottom" constant="5" id="lI0-X8-X69"/>
                                                 <constraint firstItem="iXz-2L-ZiN" firstAttribute="trailing" secondItem="4tI-vH-5L1" secondAttribute="trailing" id="mo6-Lo-39U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityLabel" destination="iXz-2L-ZiN" id="yTB-wi-RUs"/>
+                                            <outlet property="previewLabel" destination="ss6-jx-LC3" id="oJH-F2-eOr"/>
+                                            <outlet property="titleLabel" destination="4tI-vH-5L1" id="vGA-hM-3iD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qEN-Bs-a2E" id="Nfl-gg-K8M"/>
+                                    <outlet property="delegate" destination="qEN-Bs-a2E" id="3hD-g2-f0e"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PwU-8c-2XQ" firstAttribute="top" secondItem="qSy-8z-0BI" secondAttribute="bottom" id="GBT-8V-m6F"/>
-                            <constraint firstItem="qSy-8z-0BI" firstAttribute="top" secondItem="MWs-DK-7jV" secondAttribute="topMargin" id="RsC-Ej-Q4Y"/>
+                            <constraint firstItem="0QY-1Y-QZp" firstAttribute="leading" secondItem="MWs-DK-7jV" secondAttribute="leading" id="MI5-ft-k3e"/>
                             <constraint firstItem="qSy-8z-0BI" firstAttribute="leading" secondItem="MWs-DK-7jV" secondAttribute="leading" id="Xww-hy-wwr"/>
+                            <constraint firstItem="0QY-1Y-QZp" firstAttribute="top" secondItem="MWs-DK-7jV" secondAttribute="topMargin" id="eaS-jk-880"/>
+                            <constraint firstItem="qSy-8z-0BI" firstAttribute="top" secondItem="0QY-1Y-QZp" secondAttribute="bottom" id="isS-0f-IP8"/>
                             <constraint firstAttribute="trailing" secondItem="qSy-8z-0BI" secondAttribute="trailing" id="tez-5V-rVM"/>
+                            <constraint firstAttribute="trailing" secondItem="0QY-1Y-QZp" secondAttribute="trailing" id="wnc-ug-SG7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="0QY-1Y-QZp" id="e2o-5p-osd"/>
+                        <outlet property="tableView" destination="qSy-8z-0BI" id="OXY-Mq-tx1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maw-sF-Tbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="392"/>
+            <point key="canvasLocation" x="218" y="409"/>
         </scene>
     </scenes>
 </document>
